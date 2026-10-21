@@ -1,0 +1,520 @@
+@charset "utf-8";
+
+/* main */
+.main {
+    height: calc(100vh - 110px);
+    overflow: hidden;
+}
+
+/* ===============================
+        Swiper 공통
+=============================== */
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .main-visual {
+    position: relative;
+}
+
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    transform: translateX(-50%);
+}
+
+.scroll-down::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-right: 4px solid var(--white);
+    border-bottom: 4px solid var(--white);
+    transform: translate(-50%, -70%) rotate(45deg);
+    animation: arrowDown 1.6s ease-in-out infinite;
+    transition: border-color 0.3s linear;
+}
+
+.scroll-down:hover::before {
+    border-color: var(--brand);
+}
+
+.main .main-visual .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 110px);
+    object-fit: cover;
+    object-position: center 80%;
+}
+
+.swiper .swiper-slide.visualSwiper {
+    position: relative;
+}
+
+.swiper .swiper-slide.visualSwiper .swiperTextImg {
+    position: absolute;
+    width: 710px;
+    height: 400px;
+    top: 25%;
+    left: 16%;
+}
+
+.swiper .swiper-pagination {
+    position: absolute;
+    top: 40px !important;
+    right: -600px !important;
+    bottom: auto !important;
+    left: auto !important;
+}
+
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 15px 0 0 !important;
+    background: var(--white) !important;
+    opacity: 0.35 !important;
+    transition: opacity 0.5s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+}
+
+/* ===============================
+        공통 컴포넌트
+=============================== */
+
+/* 섹션별 변수 (menu / news 차이점만 여기서 분기) */
+.menu {
+    --tab-color: var(--white);
+    --tab-active-bg: #ac130c;
+    --arrow-color: var(--white);
+    --arrow-speed: 0.4s;
+}
+
+.news {
+    --tab-color: #222;
+    --tab-active-bg: var(--brand);
+    --arrow-color: #222;
+    --arrow-speed: 0.3s;
+}
+
+/* 22px 본문 타이틀 텍스트 (brand-q / 하단 배너 h4) */
+.brand .brand-q,
+.bg .aos-init .tit_area h4 {
+    font-family: var(--textFont);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+/* 더보기 버튼 */
+.more-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 28px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all .3s linear;
+}
+
+.more-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid #222;
+    border-radius: 50px;
+}
+
+.more-btn:hover {
+    background-color: var(--brand);
+    color: var(--white);
+}
+
+.more-btn:hover::before {
+    border-color: var(--brand);
+}
+
+/* 더보기 버튼 - 흰색 버전 (menu / 하단 배너) */
+.menu .more-btn,
+.bg .aos-init .tit_area .more-btn {
+    color: var(--white);
+}
+
+.menu .more-btn::before,
+.bg .aos-init .tit_area .more-btn::before {
+    border: 2px solid var(--white);
+}
+
+.menu .more-btn:hover,
+.bg .aos-init .tit_area .more-btn:hover {
+    background-color: var(--white);
+    color: var(--brand);
+}
+
+/* 탭 헤더 (menu / news) */
+.menu-header,
+.news-header {
+    text-align: center;
+}
+
+.menu-header .menu-tabs,
+.news-header .news-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-header .menu-tabs>li,
+.news-header .news-tabs>li {
+    margin: 3px;
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--tab-color);
+    opacity: 0.7;
+    transition: all 0.3s linear;
+}
+
+.menu-header .menu-tabs>li:hover,
+.news-header .news-tabs>li:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.menu-header .menu-tabs>li.active,
+.news-header .news-tabs>li.active {
+    opacity: 1;
+    background: var(--tab-active-bg);
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* 탭 패널 - js로 active 클래스가 붙을 때 화면 출력 */
+.menu-panel,
+.news-panel {
+    display: none;
+}
+
+.menu-panel.active,
+.news-panel.active {
+    display: block;
+}
+
+/* 슬라이드 영역 공통 */
+.menu-content,
+.news-content,
+.menu .menu-panel,
+.news .news-panel {
+    position: relative;
+}
+
+.menu .menuSwiper,
+.news .newsSwiper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu .menuSwiper .swiper-wrapper,
+.news .newsSwiper .swiper-wrapper {
+    width: 100%;
+}
+
+/* 카드 공통 */
+.menu .menuSwiper .swiper-slide>a,
+.news .newsSwiper .swiper-slide>a {
+    display: block;
+    height: auto;
+    border-radius: 15px;
+}
+
+.menuSwiper .swiper-slide>a .menu-img,
+.newsSwiper .swiper-slide>a .news-img {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menuSwiper .swiper-slide>a .menu-img img,
+.newsSwiper .swiper-slide>a .news-img img {
+    transition: transform 0.4s linear;
+}
+
+.menuSwiper .swiper-slide>a:hover .menu-img img,
+.newsSwiper .swiper-slide>a:hover .news-img img {
+    transform: scale(1.1);
+}
+
+.menuSwiper .swiper-slide>a .menu-text,
+.newsSwiper .swiper-slide>a .news-text {
+    text-align: center;
+    z-index: 5;
+}
+
+/* 좌우 화살표 공통 */
+.menu .menu-panel>.swiper-button-prev,
+.menu .menu-panel>.swiper-button-next,
+.news .news-panel>.swiper-button-prev,
+.news .news-panel>.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+    width: 22px;
+    height: 39px;
+    color: var(--arrow-color);
+    transform: translateY(-50%);
+    transition: all var(--arrow-speed) linear;
+}
+
+.menu .menu-panel>.swiper-button-prev,
+.news .news-panel>.swiper-button-prev {
+    left: -55px;
+}
+
+.menu .menu-panel>.swiper-button-next,
+.news .news-panel>.swiper-button-next {
+    right: -55px;
+}
+
+/* ===============================
+            Contents
+=============================== */
+
+/* Brand */
+.brand {
+    position: relative;
+}
+
+.brand .brand-txtImg {
+    margin: 0 auto;
+}
+
+.brand .brand-q {
+    padding: 30px 0 14px;
+    text-align: center;
+}
+
+.brand .brand-desc {
+    font-size: 18px;
+    line-height: 1.8;
+    word-break: keep-all;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: #222222B3;
+    font-weight: 500;
+}
+
+.brand .btn-area {
+    padding-top: 60px;
+    text-align: center;
+}
+
+/* Menu */
+.menu {
+    width: 100%;
+    background-color: var(--brand);
+}
+
+.menu-header .brand-icon {
+    margin: 0 auto;
+}
+
+.menu-header .title {
+    color: var(--white);
+}
+
+.menu .menuSwiper {
+    margin-top: 50px;
+}
+
+.menu .menuSwiper .swiper-slide>a {
+    flex-shrink: 0;
+    width: 315px;
+    padding: 0 15px;
+    background: var(--white);
+}
+
+.menuSwiper .swiper-slide>a .menu-img {
+    width: 275px;
+    height: 275px;
+}
+
+.menuSwiper .swiper-slide>a .menu-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.menuSwiper .swiper-slide>a .menu-text {
+    border-top: 1px solid #ddd;
+    padding: 26px 0 40px;
+}
+
+.menuSwiper .swiper-slide>a .menu-text h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--textFont);
+    color: #222;
+}
+
+.menuSwiper .swiper-slide>a .menu-text p {
+    font-size: 14px;
+    font-family: var(--titleFont);
+    color: #222222B3;
+    font-weight: 300;
+}
+
+.menu .menu-panel>.swiper-button-prev:hover,
+.menu .menu-panel>.swiper-button-next:hover {
+    opacity: 0.4;
+}
+
+/* 메뉴 더보기 버튼 */
+.menu .btn-area {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.menu .more-btn {
+    gap: 73px;
+}
+
+/* News */
+.news-header .title {
+    color: var(--black);
+}
+
+.news .newsSwiper .swiper-slide {
+    padding: 50px 15px;
+}
+
+.news .newsSwiper .swiper-slide>a {
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.13);
+}
+
+.news .newsSwiper .swiper-slide>a .news-img {
+    width: 100%;
+}
+
+.news .newsSwiper .swiper-slide>a .news-img img {
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.news .newsSwiper .swiper-slide>a .news-text {
+    padding: 25px 30px;
+}
+
+.news .newsSwiper .swiper-slide>a .news-text h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'pretendard', 'Noto Sans KR', sans-serif;
+    color: #222;
+    width: 370px;
+    height: 24px;
+    line-height: 1.2;
+    text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: -0.5px;
+}
+
+.news .newsSwiper .swiper-slide>a .news-text p {
+    font-size: 15px;
+    font-family: var(--titleFont);
+    color: #22222280;
+    font-weight: 400;
+    text-align: start;
+}
+
+.news .news-panel>.swiper-button-prev,
+.news .news-panel>.swiper-button-next {
+    opacity: 0.3;
+}
+
+.news .news-panel>.swiper-button-prev:hover,
+.news .news-panel>.swiper-button-next:hover {
+    opacity: 1;
+}
+
+/* 하단 banner */
+.bg {
+    position: relative;
+    width: 100%;
+    height: clamp(420px, 45vw, 635px);
+    background: url(../img-Isaac/mainBannerBg.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bg .circle_bg {
+    width: 1000px;
+    height: 1000px;
+    background-color: var(--brand);
+    border-radius: 50%;
+    position: relative;
+    left: -220px;
+    /* transform: translateX(-1000px); */
+}
+
+.bg .circle_bg::before {
+    content: "";
+    position: absolute;
+    left: -500px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--brand);
+}
+
+.bg .circle_bg .tit_area {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.bg .circle_bg .tit_area .title {
+    font-family: var(--titleFont);
+    font-size: 60px;
+    color: var(--white);
+    line-height: 1;
+    padding-bottom: 25px;
+}
+
+.bg .circle_bg .tit_area h4 {
+    letter-spacing: -0.5px;
+    color: var(--white);
+    padding-bottom: 35px;
+}

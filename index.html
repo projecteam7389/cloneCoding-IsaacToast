@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/IsaacToast/img-Isaac/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이삭토스트</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="js/aos.js" defer></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js" defer></script>
+
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/common.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <!-- <script src="js/menu.js" defer></script>
+    <script src="js/news.js" defer></script> -->
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="main">
+            <header class="header">
+                <div class="header-inner">
+                    <a href="#">
+                        <h1 class="logo">
+                            <img src="img-Isaac/logo.svg" alt="이삭토스트 로고">
+                        </h1>
+                    </a>
+                    <nav class="gnb">
+                        <!-- 1depth -->
+                        <ul class="gnb-list">
+                            <li><a href="#">(주)이삭</a></li>
+                            <li><a href="#">브랜드</a></li>
+                            <li><a href="#">메뉴</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                            <li><a href="#">고객게시판</a></li>
+                            <li><a href="#">가맹안내</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- 전체 서브메뉴 -->
+                <div class="sub-gnb">
+                    <div class="sub-gnb-inner">
+                        <!-- (주)이삭 -->
+                        <ul class="sub-list"></ul>
+                        <!-- 브랜드 -->
+                        <ul class="sub-list">
+                            <li><a href="#">이삭토스트</a></li>
+                            <li><a href="#">소스 &amp; 과일잼</a></li>
+                            <li><a href="#">CEO 인사말</a></li>
+                            <li><a href="#">연혁</a></li>
+                        </ul>
+                        <!-- 메뉴 -->
+                        <ul class="sub-list"></ul>
+                        <!-- 사회공헌 -->
+                        <ul class="sub-list"></ul>
+                        <!-- 커뮤니티 -->
+                        <ul class="sub-list">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트·뉴스</a></li>
+                            <li><a href="#">든든 딜리버리</a></li>
+                            <li><a href="#">기부 캠페인</a></li>
+                            <li><a href="#">고객 리뷰</a></li>
+                        </ul>
+                        <!-- 고객게시판 -->
+                        <ul class="sub-list">
+                            <li><a href="#">매장 칭찬하기</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">고객 문의</a></li>
+                            <li><a href="#">제휴/제안</a></li>
+                        </ul>
+                        <!-- 가맹안내 -->
+                        <ul class="sub-list">
+                            <li><a href="#">가맹 상담 신청</a></li>
+                            <li><a href="#">비용 및 절차</a></li>
+                            <li><a href="#">교육프로그램</a></li>
+                            <li><a href="#">인테리어</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="main-visual">
+                <!-- mainSwiper -->
+                <div class="swiper mainSwiper">
+                    <div class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="img-Isaac/main01.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img-Isaac/main02.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img-Isaac/main03.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img-Isaac/main04.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img-Isaac/main05.jpg" alt="">
+                        </li>
+                        <div class="swiper-slide visualSwiper">
+                            <img src="img-Isaac/main06.jpg" alt="">
+                            <img src="img-Isaac/main06_txt.png" alt="" class="swiperTextImg">
+                        </div>
+                        <div class="swiper-slide visualSwiper">
+                            <img src="img-Isaac/main07.jpg" alt="">
+                            <img src="img-Isaac/main07_txt.png" alt="" class="swiperTextImg">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!-- 스크롤 다운 화살표 -->
+                    <a href="#brand" class="scroll-down" aria-label="아래로 스크롤"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contents">
+            <section class="brand" id="brand">
+                <div class="inner">
+                    <img src="img-Isaac/brand_txt.svg" alt="Enjoy Sweet Day! Isaac Toast" class="brand-txtImg"
+                        data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
+                    <h4 class="brand-q" data-aos="fade-up" data-aos-delay="700" data-aos-duration="700">이삭토스트와 함께한 달콤한
+                        기억이 있나요?</h4>
+                    <p class="brand-desc" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="700">한 손에 담긴 든든한 한
+                        끼, 한 입에 퍼지는 미소<br>
+                        오늘도 한 손에 담긴 따듯한 토스트로 마음을 전하고 나누며 고객님을 맞이할 준비를 합니다.<br>
+                        어김없이 따듯한 토스트가 기다리는 곳, 이삭토스트 입니다.</p>
+                    <div class="btn-area" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="700">
+                        <a href="#" class="more-btn">
+                            <span>브랜드 스토리</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 8L22 12L18 16" />
+                                <path d="M2 12H22" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="menu">
+                <div class="inner">
+                    <div class="menu-header">
+                        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                            <img src="img-Isaac/icon.svg" alt="brand_icon" class="brand-icon">
+                            <h2 class="title">Isaac Toast Menu</h2>
+                        </div>
+                        <ul class="menu-tabs" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
+                            <li class="active" data-tab="toast">토스트</li>
+                            <li data-tab="set">세트메뉴</li>
+                            <li data-tab="side">사이드</li>
+                            <li data-tab="drink">음료</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-content" data-aos="fade-up" data-aos-delay="900" data-aos-duration="800">
+                        <!-- 토스트 -->
+                        <div class="menu-panel active" id="toast">
+                            <div class="swiper menuSwiper">
+                                <ul class="swiper-wrapper">
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="프렌치 브리오슈 딥더블감자">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>프렌치 브리오슈 딥더블감자</h3>
+                                                <p>French Brioche Deep Double Potato</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="프렌치 브리오슈 스크램블">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>프렌치 브리오슈 스크램블</h3>
+                                                <p>French Brioche Scrambled</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="프렌치 브리오슈 스페셜">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>프렌치 브리오슈 스페셜</h3>
+                                                <p>French Brioche Special</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="리얼 칠리 새우">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>리얼 칠리 새우</h3>
+                                                <p>Real Chili Shrimp</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="리얼 양념치킨">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>리얼 양념치킨</h3>
+                                                <p>Real Seasoned Spicy Chicken</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="계란후라이 햄치즈">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>계란후라이 햄치즈</h3>
+                                                <p>Fried Egg Ham Cheese</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="소이 크런치 치킨">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>소이 크런치 치킨</h3>
+                                                <p>Soy Crunch Chicken</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="스크램블 햄치즈">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>스크램블 햄치즈</h3>
+                                                <p>Scrambled Ham Cheese</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+
+                        <!-- 세트메뉴 -->
+                        <div class="menu-panel" id="set">
+                            <div class="swiper menuSwiper">
+                                <ul class="swiper-wrapper">
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="세트 메뉴">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>세트 메뉴</h3>
+                                                <p>Set Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="세트 메뉴 2">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>세트 메뉴 2</h3>
+                                                <p>Set Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="세트 메뉴 3">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>세트 메뉴 3</h3>
+                                                <p>Set Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="세트 메뉴 4">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>세트 메뉴 4</h3>
+                                                <p>Set Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="세트 메뉴 5">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>세트 메뉴 5</h3>
+                                                <p>Set Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+
+                        <!-- 사이드 -->
+                        <div class="menu-panel" id="side">
+                            <div class="swiper menuSwiper">
+                                <ul class="swiper-wrapper">
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="사이드 메뉴">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>사이드 메뉴</h3>
+                                                <p>Side Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="사이드 메뉴 2">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>사이드 메뉴 2</h3>
+                                                <p>Side Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="사이드 메뉴 3">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>사이드 메뉴 3</h3>
+                                                <p>Side Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="사이드 메뉴 4">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>사이드 메뉴 4</h3>
+                                                <p>Side Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="사이드 메뉴 5">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>사이드 메뉴 5</h3>
+                                                <p>Side Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+
+                        <!-- 음료 -->
+                        <div class="menu-panel" id="drink">
+                            <div class="swiper menuSwiper">
+                                <ul class="swiper-wrapper">
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="음료 메뉴">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>음료 메뉴</h3>
+                                                <p>Drink Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="음료 메뉴 2">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>음료 메뉴 2</h3>
+                                                <p>Drink Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="음료 메뉴 3">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>음료 메뉴 3</h3>
+                                                <p>Drink Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="음료 메뉴 4">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>음료 메뉴 4</h3>
+                                                <p>Drink Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide menu-card">
+                                        <a href="">
+                                            <div class="menu-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="음료 메뉴 5">
+                                            </div>
+                                            <div class="menu-text">
+                                                <h3>음료 메뉴 5</h3>
+                                                <p>Drink Menu</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="btn-area" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">
+                        <a href="#" class="more-btn">
+                            <span>더보기</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 8L22 12L18 16" />
+                                <path d="M2 12H22" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="news">
+                <div class="inner">
+                    <div class="news-header">
+                        <h2 class="title" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                            Isaac Toast News
+                        </h2>
+                        <ul class="news-tabs" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
+                            <li class="active" data-tab="all">전체</li>
+                            <li data-tab="notice">공지사항</li>
+                            <li data-tab="event">이벤트</li>
+                        </ul>
+                    </div>
+                    <div class="news-content" data-aos="fade-up" data-aos-delay="900" data-aos-duration="800">
+                        <!-- 전체 -->
+                        <div class="news-panel active" id="all">
+                            <div class="swiper newsSwiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif"
+                                                    alt="[프로모션] 이삭토스트｜라인프렌즈 키링 미판매 매장 안내">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[프로모션] 이삭토스트｜라인프렌즈 키링 미판매 매장 안내</h3>
+                                                <p>2026.08.26</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[당첨자 발표] 내가 가장 좋아하는 프렌치브리오슈는?">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[당첨자 발표] 내가 가장 좋아하는 프렌치브리오슈는?</h3>
+                                                <p>2026.08.14</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="이삭토스트X할인광 배송 지연 안내">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>이삭토스트X할인광 배송 지연 안내</h3>
+                                                <p>2026.07.16</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[당첨자 발표] 포켓몬 스토리 인증 이벤트">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[당첨자 발표] 포켓몬 스토리 인증 이벤트</h3>
+                                                <p>2026.06.25</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="isaac toast sauce & Fruit jam">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>isaac toast sauce & Fruit jam</h3>
+                                                <p>2026.06.22</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[세븐틴|스머프] 과일잼 메탈 키링 세트 출시!">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[세븐틴|스머프] 과일잼 메탈 키링 세트 출시!</h3>
+                                                <p>2026.09.11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif"
+                                                    alt="[프로모션] 이삭토스트｜라인프렌즈 키링 8/24(월) 출시!">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[프로모션] 이삭토스트｜라인프렌즈 키링 8/24(월) 출시!</h3>
+                                                <p>2026.08.21</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[이벤트] 든든 브리오슈 콤보 할인 판매">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[이벤트] 든든 브리오슈 콤보 할인 판매</h3>
+                                                <p>2026.07.31</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[이벤트] 이삭토스트 감사제">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[이벤트] 이삭토스트 감사제</h3>
+                                                <p>2026.07.27</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[이벤트] 내가 가장 좋아하느 프렌치 브리오슈는?">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[이벤트] 내가 가장 좋아하느 프렌치 브리오슈는?</h3>
+                                                <p>2026.07.27</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+
+                        <!-- 공지사항 -->
+                        <div class="news-panel" id="notice">
+                            <div class="swiper newsSwiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif"
+                                                    alt="[프로모션] 이삭토스트｜라인프렌즈 키링 미판매 매장 안내">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[프로모션] 이삭토스트｜라인프렌즈 키링 미판매 매장 안내</h3>
+                                                <p>2026.08.26</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[당첨자 발표] 내가 가장 좋아하는 프렌치브리오슈는?">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[당첨자 발표] 내가 가장 좋아하는 프렌치브리오슈는?</h3>
+                                                <p>2026.08.14</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="이삭토스트X할인광 배송 지연 안내">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>이삭토스트X할인광 배송 지연 안내</h3>
+                                                <p>2026.07.16</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[당첨자 발표] 포켓몬 스토리 인증 이벤트">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[당첨자 발표] 포켓몬 스토리 인증 이벤트</h3>
+                                                <p>2026.06.25</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="isaac toast sauce & Fruit jam">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>isaac toast sauce & Fruit jam</h3>
+                                                <p>2026.06.22</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+
+                        <!-- 이벤트 -->
+                        <div class="news-panel" id="event">
+                            <div class="swiper newsSwiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[세븐틴|스머프] 과일잼 메탈 키링 세트 출시!">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[세븐틴|스머프] 과일잼 메탈 키링 세트 출시!</h3>
+                                                <p>2026.09.11</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif"
+                                                    alt="[프로모션] 이삭토스트｜라인프렌즈 키링 8/24(월) 출시!">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[프로모션] 이삭토스트｜라인프렌즈 키링 8/24(월) 출시!</h3>
+                                                <p>2026.08.21</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[이벤트] 든든 브리오슈 콤보 할인 판매">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[이벤트] 든든 브리오슈 콤보 할인 판매</h3>
+                                                <p>2026.07.31</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[이벤트] 이삭토스트 감사제">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[이벤트] 이삭토스트 감사제</h3>
+                                                <p>2026.07.27</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide news-card">
+                                        <a href="">
+                                            <div class="news-img">
+                                                <img src="img-Isaac/logo_card.gif" alt="[이벤트] 내가 가장 좋아하느 프렌치 브리오슈는?">
+                                            </div>
+                                            <div class="news-text">
+                                                <h3>[이벤트] 내가 가장 좋아하느 프렌치 브리오슈는?</h3>
+                                                <p>2026.07.27</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="bg">
+            <div class="banner_in">
+                <div class="circle_bg" data-aos="fade-right" data-aos-delay="1200" data-aos-duration="1000"
+                    data-aos-once="true">
+                    <div class="tit_area">
+                        <h3 class="title">
+                            with <br> Isaac Toast
+                        </h3>
+                        <h4>이삭토스트와 달콤한 동행을 함께할 <br>가맹점주님을 모집합니다.</h4>
+                        <div class="btn-area">
+                            <a href="#" class="more-btn">
+                                <span>가맹 문의하기</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M18 8L22 12L18 16" />
+                                    <path d="M2 12H22" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <div class="inner">
+                <div class="foot_menu">
+                    <a href=""><strong>개인정보처리방침</strong></a>
+                    <a href="">이용약관</a>
+                    <a href="">이메일무단수집거부</a>
+                </div>
+                <div class="foot_in">
+                    <img src="img-Isaac/logo_foot.svg" alt="" class="foot_img">
+                    <div class="foot_info">
+                        <dl class="sns">
+                            <dd class="instagram">
+                                <a href="#"><img src="img-Isaac/icon_instagram.svg">인스타그램</a>
+                            </dd>
+                            <dd class="x_tw">
+                                <a href="#"><img src="img-Isaac/icon_x.svg">𝕏</a>
+                            </dd>
+                            <dd class="facebook">
+                                <a href="#"><img src="img-Isaac/icon_facebook.svg">페이스북</a>
+                            </dd>
+                            <dd class="blog">
+                                <a href="#"><img src="img-Isaac/icon_blog.svg">블로그</a>
+                            </dd>
+                        </dl>
+                        <ul>
+                            <li>
+                                <strong class="issac">(주)이삭</strong>
+                                <strong>사업자등록번호 : 305-81-70958</strong>
+                                <strong>대표 : 김하경</strong>
+                            </li>
+                            <li class="contact">
+                                <strong>가맹문의</strong>
+                                <span class="ls0">
+                                    <img src="img-Isaac/icon_call.svg" alt="전화">
+                                    <b class="call">1833-9299</b>
+                                </span>
+                            </li>
+                            <li class="contact">
+                                <strong>서울사업본부</strong>
+                                <span>서울특별시 송파구 오금로 141</span>
+                                <span class="ls0">
+                                    <img src="img-Isaac/icon_call.svg" alt="전화">
+                                    <b>02-6959-9299</b>
+                                </span>
+                            </li>
+                            <li class="contact">
+                                <strong>대전사무실</strong>
+                                <span>대전광역시 중구 산서로 53번길 11</span>
+                                <span class="ls0">
+                                    <img src="img-Isaac/icon_call.svg" alt="전화">
+                                    <b>042-274-3060</b>
+                                </span>
+                            </li>
+                            <li class="contact">
+                                <strong>대구사무실</strong>
+                                <span>대구광역시 수성구 동대구로 376 범어숲화성파크드림S 상가 225호</span>
+                                <span class="ls0">
+                                    <img src="img-Isaac/icon_call.svg" alt="전화">
+                                    <b>053-746-3060</b>
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="copyright">
+                            COPYRIGHT &copy; ISSAC. ALL RIGHTS RESERVED.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
